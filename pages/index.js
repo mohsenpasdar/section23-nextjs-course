@@ -32,7 +32,7 @@ const HomePage = () => {
     setLoadedMeetups(DUMMY_MEETUPS);
   }, []);
 
-  return <MeetupList meetups={DUMMY_MEETUPS} />;
+  return <MeetupList meetups={loadedMeetups} />;
 };
 
 export default HomePage;
