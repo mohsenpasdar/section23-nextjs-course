@@ -7,7 +7,6 @@ const NewMeetupPage = () => {
     const router = useRouter();
 
     const addMeetupHandler = async (meetupData) => {
-        console.log('before fetching', meetupData);
         const response = await fetch('/api/new-meetup', {
             method: 'POST',
             body: JSON.stringify(meetupData),
@@ -15,10 +14,8 @@ const NewMeetupPage = () => {
                 'Content-Type': 'application/json'
             }
         })
-
         const data = await response.json();
         console.log('after fetching', data);
-        
         router.push('/');
     };
     
